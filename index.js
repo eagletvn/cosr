@@ -5,7 +5,7 @@ const options = {
   //requireHeader: ['origin', 'x-requested-with'],
   removeHeaders: ['cookie', 'cookie2']
 };
-const cors_proxy = require('corsa-anywhere').createServer{
+const cors_proxy = require('cors-anywhere').createServer{
 module.exports = (req, res) => {
   console.log('headers', req.headers);
   console.log('url', req.url);
