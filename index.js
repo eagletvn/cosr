@@ -3,7 +3,7 @@
 const options = {
   originWhitelist: [],
   //requireHeader: ['origin', 'x-requested-with'],
-  requireHeader: ['Content-Type', 'application/xml'],
+  //requireHeader: ['Content-Type', 'application/xml'],
   removeHeaders: ['cookie', 'cookie2']
 };
 const cors_proxy = require('cors-anywhere').createServer{
