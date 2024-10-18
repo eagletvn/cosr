@@ -10,7 +10,7 @@ module.exports = (req, res) => {
   console.log('headers', req.headers);
   console.log('url', req.url);
 
-  // Cek jika URL tidak valid atau root
+  // Cek jika URL tidak valid atau root ("/")
   if (!req.url || req.url === "/") {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
     res.end('Invalid request. No URL provided.');
@@ -20,4 +20,3 @@ module.exports = (req, res) => {
   // Jika URL valid, teruskan ke cors-anywhere proxy
   cors_proxy.emit('request', Object.assign(req, {url: req.url.replace(':/', '://')}), res);
 };
-
