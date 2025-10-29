@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "^18"
+    "node": "22.x"
   },
   "dependencies": {
     "cors-anywhere": "^0.4.1"
