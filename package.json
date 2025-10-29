@@ -1,11 +1,11 @@
 {
-  "name": "cors-proxy-now",
+  "name": "cors-proxy",
   "version": "1.0.0",
-  "main": "index.js",
-  "engines": {
-    "node": "22.x"
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
   },
   "dependencies": {
-    "cors-anywhere": "^0.4.1"
+    "cors-anywhere": "^0.4.4"
   }
 }
