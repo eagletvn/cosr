@@ -1,7 +1,6 @@
 {
   "name": "cors-proxy-now",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "engines": {
     "node": "22.x"
