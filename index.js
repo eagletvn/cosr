@@ -3,15 +3,13 @@
 
 const cors_proxy = require('cors-anywhere');
 
-const options = {
-  originWhitelist: [], // Allow all origins
+// Konfigurasi proxy
+const host = '0.0.0.0';
+const port = process.env.PORT || 8080;
+
+cors_proxy.createServer({
+  originWhitelist: [], // izinkan semua origin
   removeHeaders: ['cookie', 'cookie2']
-};
-
-const server = cors_proxy.createServer(options);
-
-module.exports = (req, res) => {
-  console.log('headers', req.headers);
-  console.log('url', req.url);
-  server.emit('request', Object.assign(req, { url: req.url.replace(':/', '://') }), res);
-};
+}).listen(port, host, () => {
+  console.log(`CORS Anywhere server running on ${host}:${port}`);
+});
